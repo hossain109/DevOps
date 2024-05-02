@@ -1,0 +1,35 @@
+stages: #on défini les stages paris ceux disponibles
+  - build
+  - test
+  #- publish
+  #- deploy
+  #- release
+
+default:
+  image: php:latest
+
+before_script:
+  - ls
+  - echo "debut de test"
+
+test_latest:
+  stage: test
+  script: 
+    - echo "VM"
+    - php -ver
+
+building:
+  stage: build
+  script:
+    - echo "Rien a compliler"
+
+t0_latest: 
+  stage: test
+  script:
+    - php loader.php
+
+t1_latest:
+  stage: test
+  image: php:8.1-cli
+  script:
+    - php loader.php
