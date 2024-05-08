@@ -11,18 +11,19 @@
 - Start the Virtual Machine: Once Vagrantfile configured,can use the vagrant up command to create and start virtual machine.
 
 ## 
- exemple: 
-      Vagrant.configure("2") do |config|
-         config.vm.define "CLI-01" do |cli_01|
-            cli_01.vm.box = "almalinux/8"
-            cli_01.vm.hostname = "CLI-01"
-            cli_01.vm.network "public_network", bridge:"Qualcomm Atheros QCA61x4A Wireless Network Adapter"
-            cli_01.vm.provider "virtualbox" do |v|
-                  v.cpus = 1 
-                  v.memory = 1024
+
+      exemple: 
+            Vagrant.configure("2") do |config|
+            config.vm.define "CLI-01" do |cli_01|
+                  cli_01.vm.box = "almalinux/8"
+                  cli_01.vm.hostname = "CLI-01"
+                  cli_01.vm.network "public_network", bridge:"Qualcomm Atheros QCA61x4A Wireless Network Adapter"
+                  cli_01.vm.provider "virtualbox" do |v|
+                        v.cpus = 1 
+                        v.memory = 1024
+                  end
             end
-        end
-      end
+            end
 
 - Command: vagrant up
   
