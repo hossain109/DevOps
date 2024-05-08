@@ -10,7 +10,8 @@
 
 - Start the Virtual Machine: Once Vagrantfile configured,can use the vagrant up command to create and start virtual machine.
 
-##exemple: 
+## 
+ exemple: 
       Vagrant.configure("2") do |config|
          config.vm.define "CLI-01" do |cli_01|
             cli_01.vm.box = "almalinux/8"
